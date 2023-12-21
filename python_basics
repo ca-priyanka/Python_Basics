@@ -1,3 +1,8 @@
+# Functions
+round(1.68,1)
+help(round) # opens documentation
+# Python has objects, objects have methods that can be called. 
+## List methods
 x = [["a", "b", "c"],
      ["d", "e", "f"],
      ["g", "h", "i"]]
