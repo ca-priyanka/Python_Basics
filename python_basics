@@ -2,6 +2,24 @@
 round(1.68,1)
 help(round) # opens documentation
 # Python has objects, objects have methods that can be called. 
+
+# Create list areas
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Use append twice to add poolhouse and garage size
+areas.append('poolhouse')
+areas.append('garage_size')
+
+
+# Print out areas
+print(areas)
+
+# Reverse the orders of the elements in areas
+areas_sorted = areas.reverse()
+
+# Print out areas
+print(areas_sorted)
+
 ## List methods
 x = [["a", "b", "c"],
      ["d", "e", "f"],
