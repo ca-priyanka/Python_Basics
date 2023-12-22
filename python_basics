@@ -105,4 +105,94 @@ full_sorted = sorted(full, reverse = True)
 # Print out full_sorted
 print(full_sorted)
 
+##Python Packages
+# to install a package http://pip.readthedocs.org/en/stable/installing/
+# Download get-pip.py
+# Terminal pyton3 get-pip.py
+# Import the math package
+import math as mt
+
+# Definition of radius
+r = 0.43
+
+# Calculate C
+C = 2*mt.pi*r
+
+# Calculate A
+A = mt.pi*r**2
+
+# Build printout
+print("Circumference: " + str(C))
+print("Area: " + str(A))
+
+# Import radians function of math package
+from math import radians
+
+# Definition of radius
+r = 192500
+phi = 12
+# Travel distance of Moon over 12 degrees. Store in dist.
+dist = r * radians(phi)
+
+# Print out dist
+print(dist)
+
+## NumPy, or Numeric Python. It's a Python package that, among others, provides a alternative to the regular python list: the NumPy array. The NumPy array is pretty similar to the list, but has one additional feature: you can perform calculations over entire arrays.
+#  NumPy can do all of this so easily because it assumes that your NumPy array can only contain values of a single type. It's either an array of floats, either an array of booleans, and so on. 
+# Import the numpy package as np
+import numpy as np
+
+# Create list baseball
+baseball = [180, 215, 210, 210, 188, 176, 209, 200]
+
+# Create a numpy array from baseball: np_baseball
+np_baseball = np.array([baseball])
+
+# Print out type of np_baseball
+print(type(np_baseball))
+
+# Import numpy
+import numpy as np
+
+# Create array from height_in with metric units: np_height_m
+np_height_m = np.array(height_in) * 0.0254
+
+# Create array from weight_lb with metric units: np_weight_kg
+np_weight_kg = np.array(weight_lb) * 0.453595
+
+# Calculate the BMI: bmi
+bmi = np.array(np_weight_kg / (np_height_m**2))
+
+# Print out bmi
+print(bmi)
+
+# Import numpy
+import numpy as np
+
+# Calculate the BMI: bmi
+np_height_m = np.array(height_in) * 0.0254
+np_weight_kg = np.array(weight_lb) * 0.453592
+bmi = np_weight_kg / np_height_m ** 2
+
+# Create the light array
+light = np.array(bmi < 21)
+
+# Print out light
+print(light)
+
+# Print out BMIs of all baseball players whose BMI is below 21
+print(bmi[light])
+
+# Import numpy
+import numpy as np
+
+# Store weight and height lists as numpy arrays
+np_weight_lb = np.array(weight_lb)
+np_height_in = np.array(height_in)
+
+# Print out the weight at index 50
+print(np_weight_lb[50])
+
+# Print out sub-array of np_height_in: index 100 up to and including index 110
+print(np_height_in[100:111])
 
