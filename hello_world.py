@@ -98,4 +98,37 @@ len(cars)
 for car in cars:
     print(car)
     
+# Doing more within a loop
+for car in cars:
+    print(f"{car.title()}, is the best.")
+    print(f"{car.title()}, is launcing a new model.")
     
+# Doing something after a loop
+magicians = ['alice', 'mike', 'david', 'timmi']
+for magician in magicians:
+    print(f"{magician.title()}, that was a great trick!")
+    print(f"I cant wait to see your next trick, {magician.title()}.\n")
+print("thanks for a great show!")
+
+# Using the Range Fuction
+for value in range(1, 6):
+    print(value)
+    
+# Using range to make a list of numbers
+numbers = list(range(1,11))
+print(numbers)
+
+# even numbers
+even_numbers = list(range(2,11,2))
+print(even_numbers)
+# Odd numbers
+odd_numbers = list(range(1,11,2))
+print(odd_numbers)
+
+# Squares
+squares = []
+for value in range(1,11):
+    square = value**2
+    squares.append(square)
+
+print(squares)
