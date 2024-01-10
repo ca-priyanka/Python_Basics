@@ -132,3 +132,23 @@ for value in range(1,11):
     squares.append(square)
 
 print(squares)
+
+# Above code more concisely written
+squares = []
+for value in range(1,11):
+    squares.append(value**2)
+print(squares)
+
+# simple statistics with list of numbers
+digits = [1,2,3,4,5,6,7,8,9,]
+min(digits)
+max(digits)
+sum(digits)
+
+# List Comprehensions - same code in one line
+squares = [value **2 for value in range(1,11)]
+print(squares)
+
+# Slicing a lsit
+
+
