@@ -160,3 +160,19 @@ print(players[:4])
 print(players[2:])
 #print last 3 players
 print(players[-3:])
+
+# Looping through a Slice
+for player in players[:3]:
+    print(player.title())
+
+# Copying a list
+my_foods = ['pizza', 'pasta', 'falafel', 'sushi']
+friend_foods = my_foods[:]
+print(f"My favourite foods are:{my_foods}")
+print(f"\nMy friend's favourite foods are: {friend_foods}")
+
+my_foods.append('carrot cake')
+friend_foods.append('ice cream')
+print(f"My favourite foods are:{my_foods}")
+print(f"\nMy friend's favourite foods are: {friend_foods}")
+
