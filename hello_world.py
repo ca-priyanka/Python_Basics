@@ -176,3 +176,8 @@ friend_foods.append('ice cream')
 print(f"My favourite foods are:{my_foods}")
 print(f"\nMy friend's favourite foods are: {friend_foods}")
 
+# Tuples - list of items that cannot change
+# Immutable list is called a Tuple
+dimensions = (200, 30, 40)
+for dimension in dimensions:
+    print(dimension)
