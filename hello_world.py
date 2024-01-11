@@ -149,6 +149,14 @@ sum(digits)
 squares = [value **2 for value in range(1,11)]
 print(squares)
 
-# Slicing a lsit
+# Slicing a list
+players = ['timmi', 'elu', 'mumma', 'daddy', 'grandma', 'nana', 'nani']
+print(players[0:3])
 
-
+# Subset of list - eg second, third and fourth item
+print(players[1:4])
+# if you omit the first index python starts at the beginning of the list
+print(players[:4])
+print(players[2:])
+#print last 3 players
+print(players[-3:])
