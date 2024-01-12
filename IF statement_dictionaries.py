@@ -68,3 +68,9 @@ for requested_topping in requested_toppings:
         print(f"sorry, {requested_topping} not available.")
         
 print("\nFinished making your pizza")
+
+
+# Dictionaries - key value pair
+aliens = {'color': 'green', 'points': 5}
+aliens['color']
+aliens['points']
