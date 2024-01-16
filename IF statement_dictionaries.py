@@ -125,8 +125,9 @@ del aliens['points']
 print(aliens)
 
 # A dictionary of similar objects
-favourite_languages = {'mike': 'sql', 'jen': 'c', 'sarah': 'python', 'gerard': 'r', 'edward': 'rust', 'andy': 'java'}
+favourite_languages = {'mike': 'sql', 'jen': 'c', 'pri': 'python', 'gerard': 'r', 'edward': 'rust', 'andy': 'java'}
 language = favourite_languages['gerard'].title()
 print(f"Gerard's favourite language is {language}.")
 
 favourite_languages['mike']
+favourite_languages['pri']
