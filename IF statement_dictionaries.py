@@ -92,3 +92,29 @@ print(f"original position : {alien_0['x_position']}")
 
 # move the alien to the right
 # determine how far to move the alien, based on its initial speed
+if alien_0['speed'] == 'slow':
+    x_increment = 1
+elif alien_0['speed'] == 'medium':
+    x_increment = 2
+else:
+    # this must be a fast alien
+    x_increment = 3
+
+# New position = Old position + x_increment
+alien_0['x_position'] = alien_0['x_position'] + x_increment
+print(f"New position : {alien_0['x_position']}")
+
+# change speed to fast
+alien_0['speed'] = 'fast'
+if alien_0['speed'] == 'slow':
+    x_increment = 1
+elif alien_0['speed'] == 'medium':
+    x_increment = 2
+else:
+    # this must be a fast alien
+    x_increment = 3
+
+alien_0['x_position'] = alien_0['x_position'] + x_increment
+
+print(f"New position : {alien_0['x_position']}")
+
