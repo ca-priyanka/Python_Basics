@@ -131,3 +131,13 @@ print(f"Gerard's favourite language is {language}.")
 
 favourite_languages['mike']
 favourite_languages['pri']
+
+# using get() to access values - get() can be used to return a default value if requested key doesnt exist
+alien_0 = {'color': 'green', 'speed': 'slow'}
+point_value = alien_0.get('points', 'no value assigned')
+print(point_value)
+# leave out the second argument and python returns none
+point_value = alien_0.get('points')
+print(point_value)
+
+# looping through a dictionary
