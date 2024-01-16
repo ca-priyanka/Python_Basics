@@ -118,3 +118,15 @@ alien_0['x_position'] = alien_0['x_position'] + x_increment
 
 print(f"New position : {alien_0['x_position']}")
 
+# Removing Key value Pairs
+aliens = {'color': 'green', 'points': 5}
+print(aliens)
+del aliens['points']
+print(aliens)
+
+# A dictionary of similar objects
+favourite_languages = {'mike': 'sql', 'jen': 'c', 'sarah': 'python', 'gerard': 'r', 'edward': 'rust', 'andy': 'java'}
+language = favourite_languages['gerard'].title()
+print(f"Gerard's favourite language is {language}.")
+
+favourite_languages['mike']
