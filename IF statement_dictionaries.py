@@ -74,3 +74,21 @@ print("\nFinished making your pizza")
 aliens = {'color': 'green', 'points': 5}
 aliens['color']
 aliens['points']
+
+# Adding new key - value pairs
+aliens['x_position'] = 0
+aliens['y_position'] = 25
+print(aliens)
+
+# starting with an empty dictionary
+alien_0 = {}
+alien_0['color'] = 'green'
+alien_0['points'] = 5
+print(alien_0)
+
+# modifying values in a dictionary
+alien_0 = {'x_position': 0, 'y_position': 25, 'speed': 'medium'}
+print(f"original position : {alien_0['x_position']}")
+
+# move the alien to the right
+# determine how far to move the alien, based on its initial speed
