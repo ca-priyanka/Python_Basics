@@ -140,4 +140,24 @@ print(point_value)
 point_value = alien_0.get('points')
 print(point_value)
 
-# looping through a dictionary
+# looping through a dictionary - 
+# Looping through all key value pairs
+favourite_languages = {'mike': 'sql', 'jen': 'c', 'pri': 'python', 'gerard': 'r', 'edward': 'rust', 'andy': 'java'}
+for name, language in favourite_languages.items():
+    print(f"{name.title()}'s favourite language is {language.title()}.")
+    
+# looping through all the keys-
+for name in favourite_languages.keys():
+# The above code has the same output as - for name in favourite_languages:
+    print(name.title())
+
+favourite_languages = {'mike': 'sql', 'jen': 'c', 'pri': 'python', 'gerard': 'r', 'edward': 'rust', 'andy': 'java'}   
+friends = ['andy', 'pri']
+for name in favourite_languages.keys():
+    print(f" Hi {name.title()}.")
+    
+    if name in friends:
+        language = favourite_languages[name].title()
+        print(f"\t{name.title()}, I see your favourite language is {language}.")
+        
+# looping through dictionary in a particular order
