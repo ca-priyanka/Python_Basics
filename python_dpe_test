@@ -1,0 +1,52 @@
+import numpy as np
+
+# np.random.seed(25)
+
+# ar = np.random.randn(1000)
+# ar = ar * 100
+# ar = ar.astype('int8')
+# ar = ar.reshape((200, 5))
+# print(np.mean(ar))
+# print(np.max(ar))
+# print(np.min(ar))
+
+# #Using numpy, what is the number at the position of the 8th row (counting from 1; that is the first row would be 1) 
+# #and 2nd column (counting from 1; that is the first column would be 1) of the array 
+# print(np.array(ar[7,1]))
+
+# #Using numpy, how many numbers in the array ar are above the mean.
+# print(np.count_nonzero(ar>np.mean(ar)))
+
+# #Using numpy, what is the sum of the values of the array ar that are greater than -5 and less than or equal to 20
+# print(np.sum((ar>-5) & (ar<=20)))
+
+# # Using numpy, what is the position of the max value of the array ar. 
+# # Give the answer as a tuple containing the row index followed by the column index in the format with no spaces: (row index,column index) such as (10,3).
+# print(np.unravel_index(np.argmax(ar), ar.shape))        
+
+import pandas as pd
+filpath = "C:\\Users\\capri\\Workspace\\Capstone\\Python_Basics\\2019_production_reports.csv"
+df = pd.read_csv(filpath)
+#print(df.head())
+
+# In 2019, what was the total gas flared? Use the column flared as the column containing gas flared.
+yr2019 = df[pd.to_datetime(df['report_date']).dt.year == 2019]
+print(yr2019['flared'].sum())
+
+#In 2019, what operator number had the most total gas production? Use the column gas_prod as the column containing gas production.
+max_gas_prod = yr2019.groupby('operator_num')['gas_prod'].sum().idxmax()
+print(max_gas_prod)
+
+#In 2019, which month had the most oil production? Use the column oil_vol as the column containing oil production.
+months = pd.to_datetime(df['report_date']).dt.month
+max_oil_prod = yr2019.groupby(months)['oil_vol'].sum().idxmax()
+print(max_oil_prod)
+
+#In 2019, using the columns oil_vol and gas_prod what county had the most oil & gas wells operating?
+max_wells = yr2019.groupby('api_county_code')['oil_vol','gas_prod'].count().sum(axis=1).idxmax()
+print(max_wells)
+
+# In 2019, what was the average total gas production from all gas wells per day? 
+# Use the column gas_prod as the column containing gas production. 
+avg_gas_prod = yr2019['gas_prod'].sum() / len(yr2019['report_date'].unique())
+print(avg_gas_prod)

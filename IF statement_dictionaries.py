@@ -161,3 +161,10 @@ for name in favourite_languages.keys():
         print(f"\t{name.title()}, I see your favourite language is {language}.")
         
 # looping through dictionary in a particular order
+favourite_languages = {'mike': 'sql', 'jen': 'c', 'pri': 'python', 'gerard': 'r', 'edward': 'rust', 'andy': 'java'}
+for name in sorted(favourite_languages.keys()):
+    print(f"{name.title()}, thanks for taking the poll.")
+
+# looping through all the values
+favourite_languages = {'mike': 'sql', 'jen': 'c', 'pri': 'python', 'gerard': 'r', 'edward': 'rust', 'andy': 'java'}
+
